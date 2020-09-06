@@ -1,0 +1,34 @@
+<div class="hero_container">
+  <div class="hero__thumbnail_container">
+    <div class="template_header">
+      <span class="template_title">Templates</span>
+    </div>
+    <div
+      cdkDropList
+      #thumbnailList="cdkDropList"
+      [cdkDropListData]="thumbNails"
+      [cdkDropListConnectedTo]="[selectedList]"
+      (cdkDropListDropped)="selectImage($event)"
+      class="thumbnail_image_container">
+      <div *ngFor="let thumbNail of thumbNails" cdkDrag>
+        <div class="thumbnail_image_div">
+          <img alt="thumbnail" class="thumbnail_image" src="{{thumbNail}}">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="hero__canvas_container">
+    <app-header [setOrientation]="setOrientation"></app-header>
+    <div class="canvas_div">
+      <div cdkDropList
+           #canvasContainer
+           #selectedList="cdkDropList"
+           [cdkDropListData]="selectedImages"
+           [cdkDropListConnectedTo]="[thumbnailList]"
+           (cdkDropListDropped)="selectImage($event)" [ngClass]="{'canvas_16_9':orientation=='landscape', 'canvas_9_16':orientation=='portrait'}">
+<!--        <img alt="" class="selected_image" src="{{selectedImages[0]}}" />-->
+        <canvas #mainCanvas ></canvas>
+      </div>
+    </div>
+  </div>
+</div>

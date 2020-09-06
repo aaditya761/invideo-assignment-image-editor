@@ -1,0 +1,98 @@
+.hero_container{
+  width:100vw;
+  height:100vh;
+  display: flex;
+}
+
+.hero__thumbnail_container{
+  width:30%;
+  background-color: #e6e6e6;
+}
+
+.hero__canvas_container{
+  width:70%;
+  background-color: #ffffff;
+}
+
+.canvas_div{
+  padding: 2rem 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 7.5rem);
+}
+
+.canvas_16_9{
+  height: calc((70vw - 10rem)*9/16);
+  border: 1px solid darkgray;
+  width: calc(70vw - 10rem);
+  box-sizing: border-box;
+}
+
+.canvas_9_16{
+  height: calc(100vh - 7.5rem);
+  border: 1px solid darkgray;
+  width: calc((100vh - 7.5rem)*9/16);
+  box-sizing: border-box;
+}
+
+.template_header{
+  background-color: #4d5249;
+  height: 3.5rem;
+  display: flex;
+  align-items: center;
+  padding-left: 1rem;
+}
+
+.template_title{
+  font-size: 1.5rem;
+  font-family: 'Open Sans', sans-serif;
+  color: white;
+  font-weight: 600;
+}
+
+.thumbnail_image_container{
+  display: grid;
+  grid-template-columns:auto auto;
+  padding: 1rem 1rem;
+  grid-gap: 0.8rem;
+  height: calc(100vh - 6rem);
+  overflow-y: scroll;
+}
+
+.thumbnail_image_div{
+  height: 120px;
+  cursor: pointer;
+}
+.thumbnail_image{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.selected_image{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+
+::-webkit-scrollbar {
+  width: 0px;  /* Remove scrollbar space */
+  background: transparent;  /* Optional: just make scrollbar invisible */
+}
+/* Optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+  background: #FF0000;
+}
+
+
+.canvas_landscape{
+  height: calc((70vw - 10rem)*9/16);
+  width: calc(70vw - 10rem);
+}
+
+.canvas_portrait{
+  height: calc(100vh - 7.5rem);
+  width: calc((100vh - 7.5rem)*9/16);
+}
