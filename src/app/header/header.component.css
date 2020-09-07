@@ -17,3 +17,22 @@
   border-radius: 5px;
   font-family: 'Open Sans', sans-serif;
 }
+
+.header_items_div{
+  padding-left: 1rem;
+  display: flex;
+}
+
+.header_item{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-left: 1rem;
+  cursor: pointer;
+}
+
+.header_item_text{
+  font-size: 0.8rem;
+  font-family: 'Open Sans', sans-serif;
+}

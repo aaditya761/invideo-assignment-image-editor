@@ -1,6 +1,13 @@
 <div class="header_container">
-  <div>
-
+  <div class="header_items_div">
+    <div (click)="zoomInAndOut('in')" class="header_item">
+      <i class="material-icons">zoom_in</i>
+      <span class="header_item_text">zoom in</span>
+    </div>
+    <div (click)="zoomInAndOut('out')" class="header_item">
+      <i class="material-icons">zoom_out</i>
+      <span class="header_item_text">zoom out</span>
+    </div>
   </div>
   <div (click)="setOrientation()" class="toggle_orientation_button">
     Change Orientation

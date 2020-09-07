@@ -18,7 +18,9 @@
     </div>
   </div>
   <div class="hero__canvas_container">
-    <app-header [setOrientation]="setOrientation"></app-header>
+    <app-header
+      [zoomInAndOut]="zoomInAndOut"
+      [setOrientation]="setOrientation"></app-header>
     <div class="canvas_div">
       <div cdkDropList
            #canvasContainer
